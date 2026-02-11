@@ -78,6 +78,10 @@ a {
   font-weight: bold;
 }
 
+a:nth-last-child(1) {
+  margin-right: 0;
+}
+
 a:hover,
 a:focus {
   color: var(--on-background);
@@ -124,6 +128,10 @@ button {
   border: 2px solid var(--primary-color);
   font-size: 15px;
   outline: none;
+}
+
+button:nth-last-child(1) {
+  margin-right: 0;
 }
 
 button:disabled {
@@ -261,4 +269,143 @@ input:checked + .slider::before {
 .fa-solid {
   font-size: 30px;
   margin-right: 5px;
+}
+
+/* RESPONSIVE ------------------------------------------ */
+
+@media (width <= 1200px) {
+  .about-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+    gap: 40px;
+    justify-items: center;
+  }
+
+  .image-container {
+    margin-right: 0;
+    padding: 30px 30px;
+    width: 100%;
+    max-width: 520px;
+  }
+
+  .image-container h2 {
+    margin-bottom: 20px;
+  }
+
+  .image-container img {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+  }
+
+  .fa-brands {
+    font-size: 80px;
+  }
+}
+
+@media (width <= 930px) {
+  .fa-brands {
+    font-size: 60px;
+  }
+
+  section#about h1 {
+    font-size: 90px;
+  }
+}
+
+@media (width <= 775px) {
+  nav {
+  font-size: 20px;
+  letter-spacing: 2px;
+  }
+
+  a {
+    margin-right: 20px;
+  }
+
+  .fa-brands {
+    margin-right: 35px;
+  }
+
+  section#about h1 {
+    font-size: 80px;
+  }
+}
+
+@media (width <= 685px) {
+  section#about h1 {
+    text-align: center;
+  }
+
+  .fa-brands {
+    font-size: 55px;
+    margin-right: 20px;
+  }
+}
+
+@media (width <= 660px) {
+  #dis1 {
+    display: none;
+  }
+
+  section#about h1 {
+    font-size: 60px;
+  }
+
+  #gone2 {
+    display: none;
+  }
+
+  button {
+    width: 80px;
+    font-size: 14px;
+  }
+}
+
+@media (width <= 570px) {
+  #gone1 {
+    display: none;
+  }
+
+  .fa-youtube {
+    display: none;
+  }
+}
+
+@media (width <= 540px) {
+  #dis2 {
+    display: none;
+  }
+
+  #home h1 {
+    font-size: 80px;
+  }
+}
+
+@media (width <= 465px) {
+  .fa-brands {
+    font-size: 45px;
+    margin-right: 10px;
+  }
+
+  button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .text-box {
+    width: 90%;
+  }
+
+  nav {
+  font-size: 15px;
+  letter-spacing: 1px;
+  }
+
+  a {
+    margin-right: 15px;
+  }
 }
